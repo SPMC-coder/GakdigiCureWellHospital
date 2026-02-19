@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|g:\\users\\gowthaman\\documents\\github\\gakdigicurewellhospital\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|g:\\users\\gowthaman\\documents\\github\\gakdigicurewellhospital\\data\\curewellhospitaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|solutionrelative:data\\curewellhospitaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|g:\\users\\gowthaman\\documents\\github\\gakdigicurewellhospital\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|g:\\users\\gowthaman\\documents\\github\\gakdigicurewellhospital\\storedprocedures.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|solutionrelative:storedprocedures.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|g:\\users\\gowthaman\\documents\\github\\gakdigicurewellhospital\\controllers\\surgerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|solutionrelative:controllers\\surgerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|g:\\users\\gowthaman\\documents\\github\\gakdigicurewellhospital\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|g:\\users\\gowthaman\\documents\\github\\gakdigicurewellhospital\\models\\surgery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|solutionrelative:models\\surgery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|g:\\users\\gowthaman\\documents\\github\\gakdigicurewellhospital\\storedprocedures.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{81E0435F-F35C-4D0C-AF3C-03209A29709E}|CureWellHospital.csproj|solutionrelative:storedprocedures.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T09:40:34.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CureWellHospitalDbContext.cs",
+              "DocumentMoniker": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Data\\CureWellHospitalDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\CureWellHospitalDbContext.cs",
+              "ToolTip": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Data\\CureWellHospitalDbContext.cs",
+              "RelativeToolTip": "Data\\CureWellHospitalDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T09:40:32.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StoredProcedures.sql ",
+              "DocumentMoniker": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\StoredProcedures.sql",
+              "RelativeDocumentMoniker": "StoredProcedures.sql",
+              "ToolTip": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\StoredProcedures.sql",
+              "RelativeToolTip": "StoredProcedures.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-19T09:37:44.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T09:36:41.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SurgeryController.cs",
+              "DocumentMoniker": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Controllers\\SurgeryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SurgeryController.cs",
+              "ToolTip": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Controllers\\SurgeryController.cs",
+              "RelativeToolTip": "Controllers\\SurgeryController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T09:36:28.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T09:36:22.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Surgery.cs",
+              "DocumentMoniker": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Models\\Surgery.cs",
+              "RelativeDocumentMoniker": "Models\\Surgery.cs",
+              "ToolTip": "G:\\Users\\GOWTHAMAN\\Documents\\GitHub\\GakdigiCureWellHospital\\Models\\Surgery.cs",
+              "RelativeToolTip": "Models\\Surgery.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T09:26:34.32Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

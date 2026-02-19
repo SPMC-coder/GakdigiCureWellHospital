@@ -1,18 +1,18 @@
 using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
-using CureWellHospital.Data;
+using Microsoft.Extensions.Configuration;
 using CureWellHospital.Interfaces;
 
 namespace CureWellHospital
 {
     public class CureWellHospitalRepository : ICureWellHospitalRepository
     {
-        private readonly CureWellHospitalDbContext _context;
+        private readonly string _connectionString;
 
-        public CureWellHospitalRepository(CureWellHospitalDbContext context)
+        public CureWellHospitalRepository(IConfiguration configuration)
         {
-            _context = context;
+            _connectionString = configuration.GetConnectionString("CureWellHospitalDB")!;
         }
 
         /// <summary>
@@ -26,50 +26,39 @@ namespace CureWellHospital
             // Initialize the out parameter to 0 (required for exceptions/failures)
             surgeryId = 0;
 
-            // EXEC captures the SP RETURN value into @return_value
-            // @SurgeryId is an OUTPUT parameter
-            var sql = "EXEC @return_value = usp_AddSurgeryDetails @DoctorId, @SurgeryDate, @StartTime, @EndTime, @SurgeryCategory, @SurgeryId OUT";
-
             try
             {
-                // 1. Define input SqlParameters
-                var doctorIdParam        = new SqlParameter("@DoctorId",        doctorId);
-                var surgeryDateParam     = new SqlParameter("@SurgeryDate",      surgeryDate);
-                var startTimeParam       = new SqlParameter("@StartTime",        startTime);
-                var endTimeParam         = new SqlParameter("@EndTime",          endTime);
-                var surgeryCategoryParam = new SqlParameter("@SurgeryCategory",  surgeryCategory);
+                using SqlConnection conn = new SqlConnection(_connectionString);
+                using SqlCommand cmd = new SqlCommand("usp_AddSurgeryDetails", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
-                // 2. OUTPUT parameter – receives the newly generated SurgeryId
-                var surgeryIdOutParam = new SqlParameter("@SurgeryId", SqlDbType.Int)
+                // Input parameters
+                cmd.Parameters.AddWithValue("@DoctorId",        doctorId);
+                cmd.Parameters.AddWithValue("@SurgeryDate",     surgeryDate);
+                cmd.Parameters.AddWithValue("@StartTime",       startTime);
+                cmd.Parameters.AddWithValue("@EndTime",         endTime);
+                cmd.Parameters.AddWithValue("@SurgeryCategory", surgeryCategory);
+
+                // OUTPUT parameter - receives the newly generated SurgeryId
+                SqlParameter surgeryIdOutParam = new SqlParameter("@SurgeryId", SqlDbType.Int)
                 {
-                    Direction = ParameterDirection.Output,
-                    Value     = surgeryId   // initialized to 0
+                    Direction = ParameterDirection.Output
                 };
+                cmd.Parameters.Add(surgeryIdOutParam);
 
-                // 3. ReturnValue parameter – captures the SP's RETURN statement value
-                var returnValueParam = new SqlParameter("@return_value", SqlDbType.Int)
+                // ReturnValue parameter - captures the SP's RETURN statement value
+                SqlParameter returnValueParam = new SqlParameter("@return_value", SqlDbType.Int)
                 {
                     Direction = ParameterDirection.ReturnValue
                 };
+                cmd.Parameters.Add(returnValueParam);
 
-                // 4. Execute the stored procedure via EF Core raw SQL
-                _context.Database.ExecuteSqlRaw(
-                    sql,
-                    returnValueParam,
-                    doctorIdParam,
-                    surgeryDateParam,
-                    startTimeParam,
-                    endTimeParam,
-                    surgeryCategoryParam,
-                    surgeryIdOutParam
-                );
+                conn.Open();
+                cmd.ExecuteNonQuery();
 
-                // 5. Read back OUTPUT and RETURN values
-                int returnValue = (int)returnValueParam.Value;
-                surgeryId       = (int)surgeryIdOutParam.Value;
-
-                // 6. Return the SP's RETURN value to the caller
-                return returnValue;
+                // Read back OUTPUT and RETURN values
+                surgeryId = (int)surgeryIdOutParam.Value;
+                return (int)returnValueParam.Value;
             }
             catch (Exception)
             {
@@ -85,26 +74,26 @@ namespace CureWellHospital
         /// </summary>
         public int UpdateSurgeryTime(int surgeryId, int startTime, int endTime)
         {
-            var sql = "EXEC @return_value = usp_UpdateSurgeryTime @SurgeryId, @StartTime, @EndTime";
-
             try
             {
-                var surgeryIdParam  = new SqlParameter("@SurgeryId",  surgeryId);
-                var startTimeParam  = new SqlParameter("@StartTime",  startTime);
-                var endTimeParam    = new SqlParameter("@EndTime",    endTime);
+                using SqlConnection conn = new SqlConnection(_connectionString);
+                using SqlCommand cmd = new SqlCommand("usp_UpdateSurgeryTime", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
-                var returnValueParam = new SqlParameter("@return_value", SqlDbType.Int)
+                // Input parameters
+                cmd.Parameters.AddWithValue("@SurgeryId", surgeryId);
+                cmd.Parameters.AddWithValue("@StartTime", startTime);
+                cmd.Parameters.AddWithValue("@EndTime",   endTime);
+
+                // ReturnValue parameter - captures the SP's RETURN statement value
+                SqlParameter returnValueParam = new SqlParameter("@return_value", SqlDbType.Int)
                 {
                     Direction = ParameterDirection.ReturnValue
                 };
+                cmd.Parameters.Add(returnValueParam);
 
-                _context.Database.ExecuteSqlRaw(
-                    sql,
-                    returnValueParam,
-                    surgeryIdParam,
-                    startTimeParam,
-                    endTimeParam
-                );
+                conn.Open();
+                cmd.ExecuteNonQuery();
 
                 return (int)returnValueParam.Value;
             }
