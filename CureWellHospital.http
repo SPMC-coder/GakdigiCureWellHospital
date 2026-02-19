@@ -1,0 +1,6 @@
+@CureWellHospital_HostAddress = http://localhost:5171
+
+GET {{CureWellHospital_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
